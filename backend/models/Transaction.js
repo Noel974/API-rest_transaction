@@ -9,6 +9,7 @@ const transactionSchema = mongoose.Schema({
     amount: { type: Number, required: true },
     created_at: { type: Date, default: Date.now },
     updated_at: { type: Date, default: Date.now },
+    categorie: { type: mongoose.Schema.Types.ObjectId, ref: 'Categorie', required: true }, // Ajout de la catégorie
 });
 
 // Application du plugin sur le transactionSchema
